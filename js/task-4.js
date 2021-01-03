@@ -1,11 +1,18 @@
 const buttonDecRef = document.querySelector('button[data-action="decrement"]')
 const buttonIncRef = document.querySelector('button[data-action="increment"]')
-let counterValue = document.querySelector('#value')
+const valueRef = document.querySelector('#value')
 
-const onDecBtnClick = () =>
-	(counterValue.textContent = Number(counterValue.textContent) - 1)
-const onIncBtnClick = () =>
-	(counterValue.textContent = Number(counterValue.textContent) + 1)
+let counterValue = 0
+
+const onDecBtnClick = () => {
+	counterValue -= 1
+	valueRef.textContent = counterValue
+}
+
+const onIncBtnClick = () => {
+	counterValue += 1
+	valueRef.textContent = counterValue
+}
 
 buttonDecRef.addEventListener('click', onDecBtnClick)
 buttonIncRef.addEventListener('click', onIncBtnClick)

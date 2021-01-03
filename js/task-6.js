@@ -10,4 +10,4 @@ const onInputLostFocus = () => {
 		inputRef.classList.remove('valid')
 	}
 }
-inputRef.addEventListener('change', onInputLostFocus)
+inputRef.addEventListener('blur', onInputLostFocus)
